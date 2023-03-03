@@ -49,3 +49,16 @@ function limesToCut(wedgesNeeded, limes) {
 }
 
 // console.log(limesToCut(25, ['small', 'small', 'large', 'medium', 'small']));
+
+///----///
+
+function remainingOrders(timeLeft, orders) {
+  do {
+    let time = timeToMixJuice(orders[0]);
+    timeLeft -= time;
+    orders.splice(0, 1);
+  } while (timeLeft > 0);
+  return orders;
+}
+
+// console.log(remainingOrders(5, ['Energizer', 'All or Nothing', 'Green Garden']));
